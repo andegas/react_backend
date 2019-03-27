@@ -1,0 +1,41 @@
+{
+  "data": {
+      "users": [
+        {
+          "id": 1,
+          "name": "Quinn Dunn",
+          "email": "egestas@quamafelis.com"
+        },
+        {
+          "id": 2,
+          "name": "Quinn Dunn",
+          "email": "egestas@quamafelis.com"
+        },
+        {
+          "id": 3,
+          "name": "Quinn Dunn",
+          "email": "egestas@quamafelis.com"
+        },
+        {
+          "id": 4,
+          "name": "Quinn Dunn",
+          "email": "egestas@quamafelis.com"
+        }
+      ],
+      "points": [
+        {
+          "street": "821-3122 Consequat Ave",
+          "city": "D�gelis",
+          "zip": "26654",
+          "region": "Quebec",
+
+
+          "country": "Northern Mariana Islands",
+          "geo": "-38.35679, -156.51844",
+          "date": "1344063697",
+          "id": 1,
+          "userid": 1
+        }
+      ]
+  }
+}
