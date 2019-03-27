@@ -2,18 +2,41 @@
   "name": "node_server",
   "version": "1.0.0",
   "description": "Api by node_server",
-  "main": "lib/server.js",
+  "main": "lib/app.js",
+  "repository": "andegas/react_backend",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node lib/app.js --watch --interpreter babel-node --name appDev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "module-check": "npm-check"
   },
   "author": "Hayk Grigoryan",
   "license": "ISC",
-  "dependencies": {
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
+  "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "ejs": "^2.6.1",
     "eslint": "^5.15.3",
     "eslint-plugin-react": "^7.12.4",
+    "npm-check": "^5.9.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   }
 }

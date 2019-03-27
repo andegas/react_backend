@@ -12,8 +12,7 @@
  
  `npm install babel-eslint`
  
- `npm install pm2 -g`
- `npm install babel-cli -g`
+ `npm install babel-cli`
  
  `npm install ejs` -- Install ejs plugin for IDE
 
