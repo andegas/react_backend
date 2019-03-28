@@ -7,22 +7,32 @@
   "scripts": {
     "start": "node lib/app.js --watch --interpreter ./node_modules/.bin/babel-node --name appDev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "module-check": "npm-check"
+    "module-check": "npm-check",
+    "webpack": "webpack -wd",
+    "build-webpack": "webpack -p"
   },
   "author": "Hayk Grigoryan",
   "license": "ISC",
-
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "eslint": "^5.15.3",
     "eslint-plugin-react": "^7.12.4",
-    "npm-check": "^5.9.0"
+    "npm-check": "^5.9.0",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.29.6"
   }
 }
