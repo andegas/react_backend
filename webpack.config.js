@@ -8,6 +8,6 @@ const config = {
         path: path.resolve(__dirname, 'public'),
         filename: '[name].js'
     },
-}
+};
 
 module.exports = config;
