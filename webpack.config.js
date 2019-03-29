@@ -1,13 +1,14 @@
 const path = require('path');
-const webpack = require('webpack');
-const config = {
-    resolve: {
-        modules: [path.resolve('./lib'), path.resolve('./node_modules')]
-    },
+
+module.exports = {
+    entry: ['babel-polyfill', './lib/components/index.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: '[name].js'
+        filename: 'vendor.js'
     },
+    module: {
+        rules: [
+            {test: /\.js$/, exclude: /node_modules/, use: 'babel-loader'}
+        ]
+    }
 };
-
-module.exports = config;
