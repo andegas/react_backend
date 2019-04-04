@@ -20,4 +20,7 @@
 4. Create server.js for backend node app.
 5. Create config.js for any config information for node app.
 
+6. kill all node processes
+
+taskkill /im node.exe /F
  

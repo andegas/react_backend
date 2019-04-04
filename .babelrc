@@ -1,7 +1,5 @@
 {
   "presets": [
-    "react",
-    "env",
-    "stage-2"
+    "env"
   ]
 }
