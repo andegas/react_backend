@@ -1,16 +1,25 @@
 import React from 'react';
 
-
-// const dateDisplay = (dateString) =>
-//     new Date(dateString).toDateString();
+import Point from './Point';
 
 const User = (props) => {
-    const {user} = props;
-    // const author = store.lookupAuthor(article.authorId);
+    const {user, actions} = props;
+    const points = actions.lookupPoints(user.id);
     return (
-        <div key={user.id}>
+        <div>
             <div>{user.name} - {user.email}</div>
+            {points && <div>
+                <h4>Points:</h4>
+                {Object.values(points).map(point =>
+                    <Point
+                        key={point.id}
+                        point={point}
+                    />
+                )}
+            </div>}
+            <hr/>
         </div>
+
     );
 };
 

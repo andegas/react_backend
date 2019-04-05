@@ -1,18 +1,12 @@
 class StateApi {
     constructor(rawData) {
         this.data = {
-            users: this.mapIntoObject(rawData.users),
-            points: this.mapIntoObject(rawData.points),
+            users: rawData.users,
+            points: rawData.points,
         };
     }
-    mapIntoObject(arr) {
-        return arr.reduce((acc, curr) => {
-            acc[curr.id] = curr;
-            return acc;
-        }, {});
-    }
-    getState = () => {
-        return this.data;
+    getPoints = () => {
+        return this.data.points;
     }
     getUsers = () => {
         return this.data.users;

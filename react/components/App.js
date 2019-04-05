@@ -11,15 +11,20 @@ class App extends React.Component{
         super();
         this.state = {
             users: api.getUsers(),
-            store: api.getState()
+            points: api.getPoints()
         };
     }
-
-    render() {
+    userActions= {
+        lookupPoints: userId => {
+            return api.getPoints().filter(point => point.userId == userId);
+        },
+    }
+    render(){
         return (
             <UserList
                 users={this.state.users}
-                store={this.props.store}
+                points={this.state.points}
+                userActions={this.userActions}
             />
         );
     }
