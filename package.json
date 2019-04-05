@@ -31,6 +31,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
