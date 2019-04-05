@@ -14,6 +14,9 @@ class StateApi {
     getState = () => {
         return this.data;
     }
+    getUsers = () => {
+        return this.data.users;
+    }
 }
 
 export default StateApi;

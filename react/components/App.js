@@ -1,8 +1,20 @@
 import React from 'react';
 import UserList from './UserList';
 
+import { data } from '../../data/data';
+import StateApi from '../StateApi';
+
+const api = new StateApi(data);
+
 class App extends React.Component{
-    state = this.props.store.getState();
+    constructor(){
+        super();
+        this.state = {
+            users: api.getUsers(),
+            store: api.getState()
+        };
+    }
+
     render() {
         return (
             <UserList

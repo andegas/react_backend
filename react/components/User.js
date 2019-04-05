@@ -8,9 +8,8 @@ const User = (props) => {
     const {user} = props;
     // const author = store.lookupAuthor(article.authorId);
     return (
-        <div>
-            <div>{user.name}</div>
-            <div>{user.email}</div>
+        <div key={user.id}>
+            <div>{user.name} - {user.email}</div>
         </div>
     );
 };
