@@ -1,16 +1,14 @@
 import React from 'react';
-// import DataApi from '../DataApi';
-// import {data} from '../data';
-// import UsersList from './UsersList';
-// import axios from 'axios';
-
-// const api = new DataApi(data);
+import UserList from './UserList';
 
 class App extends React.Component{
-
+    state = this.props.store.getState();
     render() {
         return (
-            <div>App</div>
+            <UserList
+                users={this.state.users}
+                store={this.props.store}
+            />
         );
     }
 }
