@@ -7,20 +7,7 @@ import React from 'react';
 // const api = new DataApi(data);
 
 class App extends React.Component{
-    state = {
-        users:{},
-        points:{},
-    };
 
-    // async componentDidMount() {
-        // const resp = await axios.get('/data');
-        // const api = new DataApi(resp.data);
-
-        // this.setState(() => ({
-        //     users: api.getUsers(),
-        //     points: api.getPoints()
-        // }));
-    // }
     render() {
         return (
             <div>App</div>
