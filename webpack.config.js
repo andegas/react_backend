@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: ['babel-polyfill', './lib/components/index.js'],
+    entry: ['./react/components/index.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'vendor.js'
