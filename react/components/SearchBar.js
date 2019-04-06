@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
         searchTerm: ''
     };
     doSearch = debounce(() => {
-        this.props.doSearch(this.state.searchTerm);
+        this.props.store.doSearch(this.state.searchTerm);
     }, 300);
     handleSearch = (event) => {
         this.setState({ searchTerm: event.target.value }, () => {

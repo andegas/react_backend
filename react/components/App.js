@@ -3,6 +3,7 @@ import axios from 'axios';
 import pickBy from 'lodash.pickby';
 import UserList from './UserList';
 import SearchBar from './SearchBar';
+import Comp from './Comp';
 
 import StateApi from '../StateApi';
 
@@ -27,7 +28,7 @@ class App extends React.Component{
     };
     render(){
         let {users, searchTerm} = this.state;
-        const searchRE = new RegExp(searchTerm, 'i');debugger;
+        const searchRE = new RegExp(searchTerm, 'i');
         if(searchTerm){
             users = pickBy(users, (value) => {
                 return value.name.match(searchRE)
@@ -36,6 +37,7 @@ class App extends React.Component{
         }
         return (
             <div>
+                <Comp store={this.state.store}/>
                 <SearchBar
                     store={this.state.store}
                     doSearch={this.setSearchTerm}
