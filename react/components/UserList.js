@@ -11,7 +11,6 @@ const UserList = (props) => {
                     key={user.id}
                     user={user}
                     store={props.store}
-                    actions = {props.userActions}
                 />
 
             )}

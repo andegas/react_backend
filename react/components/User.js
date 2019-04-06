@@ -3,8 +3,8 @@ import React from 'react';
 import Point from './Point';
 
 const User = (props) => {
-    const {user, actions} = props;
-    const points = actions.lookupPoints(user.id);
+    const {user, store} = props;
+    const points = store.lookupPoints(user.id);
     return (
         <div>
             <div>{user.name} - {user.email}</div>
