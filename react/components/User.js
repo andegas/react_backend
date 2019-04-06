@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Point from './Point';
 
@@ -21,6 +22,13 @@ const User = (props) => {
         </div>
 
     );
+};
+
+User.propTypes = {
+    users: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        age: PropTypes.number.isRequired
+    })
 };
 
 export default User;
