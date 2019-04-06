@@ -14,6 +14,17 @@ class StateApi {
     lookupPoints = userId => {
         return this.data.points.filter(point => point.userId == userId);
     };
+    setSearchTerm = searchTerm => {debugger;
+        this.mergeWithState({
+            searchTerm,
+        });
+    };
+    mergeWithState = stateChange => {
+        this.data = {
+            ...this.data,
+            ...stateChange,
+        };
+    };
 }
 
 export default StateApi;
