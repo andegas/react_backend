@@ -1,5 +1,14 @@
 {
   "data": {
+      "articles": [
+        {
+          "title": "Article Title",
+          "urlToImage": "#",
+          "name": "Asad Dunn",
+          "description": "Desctiption of article",
+          "url": "www.google.com"
+        }
+      ],
       "users": [
         {
           "id": 1,
