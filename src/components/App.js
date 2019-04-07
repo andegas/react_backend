@@ -4,7 +4,7 @@ import NewsItem from './NewsItem';
 import Loading from './Loading';
 
 const App = ()=>(
-    <div>Button
+    <div>
         <Button />
         <NewsItem />
         <Loading />
