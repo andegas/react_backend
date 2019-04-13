@@ -13,6 +13,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     reducer,
+
     composeWithDevTools(
         applyMiddleware(sagaMiddleware, logger)
     ));

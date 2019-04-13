@@ -1,9 +1,11 @@
-import { put, takeLatest, all } from 'redux-saga/effects';
-import axios from 'axios';
+import { put, takeLatest, all, call } from 'redux-saga/effects';
+import {fetchData} from '../Api';
+// import axios from 'axios';
 
 function* fetchNews() {
     try {
-        const response = yield axios.get('/data');
+        const response = yield call(fetchData);
+        // const response = yield axios.get('/data');
         yield put({type: 'NEWS_RECEIVED', json: response.data.articles,});
     } catch (e) {
         console.log(e.toString());
