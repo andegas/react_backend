@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "type": [
+      "text",
+      "password",
+      "email",
+      "number",
+      "radio",
+      "checkbox",
+      "button",
+      "submit"
+    ],
+    "name": "",
+    "value": "",
+    "placeholder":"",
+    "label": ""
+  },
+  {
+    "id": 2,
+    "type": "textarea",
+    "name": "",
+    "value": "",
+    "placeholder":"",
+    "label": ""
+  },
+  {
+    "id": 3,
+    "type": "select",
+    "name": "",
+    "value": "",
+    "placeholder":"",
+    "label": "",
+    "option": {
+      "value": "",
+      "label": ""
+    }
+  }
+]
