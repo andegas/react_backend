@@ -8,6 +8,7 @@ import Result from '../Result';
 
 class Home extends React.Component{
     render(){
+        console.log(this.props)
         return (
             <div className="container-fluid">
                 <p>Home screen</p>
