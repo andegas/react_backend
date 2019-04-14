@@ -24,15 +24,18 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
     "babel-eslint": "^10.0.1",
+    "css-loader": "^2.1.1",
     "eslint": "^5.15.3",
     "eslint-plugin-react": "^7.12.4",
     "nodemon": "^1.18.10",
     "npm-check": "^5.9.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
+    "bootstrap": "^4.3.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "history": "^4.9.0",

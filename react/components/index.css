@@ -1,0 +1,9 @@
+.plus_icon {
+    font-size: 25px;
+    font-weight: 600;
+    color: green;
+    text-align: center;
+}
+a:hover {
+    text-decoration: none
+}
