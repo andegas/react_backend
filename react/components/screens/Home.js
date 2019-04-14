@@ -1,14 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {setDataStore} from '../../actions';
 import List from '../List';
 import Form from '../Form';
 import Result from '../Result';
 
-
 class Home extends React.Component{
     render(){
-        console.log(this.props)
         return (
             <div className="container-fluid">
                 <p>Home screen</p>
@@ -28,12 +24,4 @@ class Home extends React.Component{
     }
 }
 
-const mapStateToProps = state =>{
-
-    return {
-        data: state.data.data
-    };
-
-};
-
-export default connect(mapStateToProps,{setDataStore})(Home);
+export default Home;
