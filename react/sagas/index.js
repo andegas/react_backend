@@ -2,7 +2,6 @@ import { put, takeLatest, all, call } from 'redux-saga/effects';
 
 function* fetchNews() {
     try {
-        // const response = yield call(fetchData);
         // const response = yield axios.get('/data');
         // yield put({type: 'SET_DATA_IN_STORE', json: response.data.articles,});
     } catch (e) {
