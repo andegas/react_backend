@@ -8,7 +8,7 @@ class Home extends React.Component{
     render(){
         return (
             <div className="container-fluid">
-                <p>Home</p>
+                <p>Home screen</p>
                 <div className="row">
                     <div className="col-md-4">
                         <List type='form_list'/>
