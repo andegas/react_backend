@@ -6,8 +6,8 @@ import Form from '../Form';
 import Result from '../Result';
 
 
-class Home extends React.Component{
-    render(){
+class Home extends React.Component {
+    render() {
         return (
             <div className="container-fluid">
                 <p>Home screen</p>
@@ -35,4 +35,4 @@ const mapStateToProps = state =>{
 
 };
 
-export default connect(mapStateToProps,{setDataStore})(Home)
+export default connect(mapStateToProps,{setDataStore})(Home);

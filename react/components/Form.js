@@ -1,11 +1,11 @@
 import React from 'react';
 
-class Form extends React.Component{
-    render(){
+class Form extends React.Component {
+    render() {
         return (
             <div>
-               <div className='text-center'>Form</div>
-               <form></form>
+                <div className='text-center'>Form</div>
+                <form></form>
             </div>
         );
     }
