@@ -1,3 +1,8 @@
+input:focus,
+select:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
 .plus_icon {
     font-size: 25px;
     font-weight: 600;
@@ -21,10 +26,15 @@ a:hover {
     margin-left: 10px;
     transition: .5s;
 }
-.form_items input:focus{
-    box-shadow: none !important;
-    outline: none !important;
-}
 .f_item{
     border-bottom: 1px solid #e3e3e3;
+}
+.btn-submit{
+    background-color: #203139;
+    color: #e3e3e3;
+}
+.btn-submit:hover{
+    opacity: .9;
+    color: #e3e3e3;
+    transition: ease-in .3s;
 }

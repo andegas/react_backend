@@ -1,69 +1,42 @@
 {
   "data": {
-      "users": [
-        {
-          "id": 1,
-          "name": "Asad Dunn",
-          "email": "egestas@quamafelis.com"
-        },
-        {
-          "id": 2,
-          "name": "Quinn Dunn",
-          "email": "egestas@quamafelis.com"
-        },
-        {
-          "id": 3,
-          "name": "Quinn Dunn",
-          "email": "egestas@quamafelis.com"
-        },
-        {
-          "id": 4,
-          "name": "Quinn Dunn",
-          "email": "egestas@quamafelis.com"
+    "form": [
+      {
+        "id": 1,
+        "type": [
+          "text",
+          "password",
+          "email",
+          "number",
+          "radio",
+          "checkbox",
+          "button",
+          "submit"
+        ],
+        "name": "",
+        "value": "",
+        "placeholder": "",
+        "label": ""
+      },
+      {
+        "id": 2,
+        "type": "",
+        "name": "",
+        "value": "",
+        "placeholder": "",
+        "label": ""
+      },
+      {
+        "id": 3,
+        "type": "",
+        "name": "",
+        "value": "",
+        "label": "",
+        "option": {
+          "value": "",
+          "label": ""
         }
-      ],
-      "points": [
-        {
-          "street": "821-3122 Consequat Ave",
-          "city": "D�gelis",
-          "zip": "26654",
-          "region": "Quebec",
-          "country": "Northern Mariana Islands",
-          "geo": "-38.35679, -156.51844",
-          "date": "1344063697",
-          "id": 1,
-          "userId": 1
-        },{
-          "street": "821-3122 Consequat Ave",
-          "city": "D�gelis",
-          "zip": "26654",
-          "region": "Quebec",
-          "country": "Northern Mariana Islands",
-          "geo": "-38.35679, -156.51844",
-          "date": "1344063697",
-          "id": 2,
-          "userId": 1
-        },{
-          "street": "821-3122 Consequat Ave",
-          "city": "D�gelis",
-          "zip": "26654",
-          "region": "Quebec",
-          "country": "Northern Mariana Islands",
-          "geo": "-38.35679, -156.51844",
-          "date": "1344063697",
-          "id": 2,
-          "userId": 2
-        },{
-          "street": "821-3122 Consequat Ave",
-          "city": "D�gelis",
-          "zip": "26654",
-          "region": "Quebec",
-          "country": "Northern Mariana Islands",
-          "geo": "-38.35679, -156.51844",
-          "date": "1344063697",
-          "id": 2,
-          "userId": 4
-        }
-      ]
+      }
+    ]
   }
 }

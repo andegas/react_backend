@@ -1,9 +1,9 @@
 import React from 'react';
-import Input from './InputForm';
-import Checkbox from './CheckboxForm';
-import Radio from './RadioForm';
-import Textarea from './TextareaForm';
-import Select from './SelectForm';
+import Input from './input/InputForm';
+// import Checkbox from './checkbox/CheckboxForm';
+// import Radio from './radio/RadioForm';
+import Textarea from './textarea/TextareaForm';
+import Select from './select_option/SelectForm';
 
 class FormItems extends React.Component{
     constructor(props) {
@@ -14,8 +14,8 @@ class FormItems extends React.Component{
         return (
             <div className='col-12 px-0 form_items'>
                 <Input />
-                <Checkbox />
-                <Radio />
+                {/*<Checkbox />*/}
+                {/*<Radio />*/}
                 <Textarea />
                 <Select />
             </div>
