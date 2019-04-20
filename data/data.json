@@ -1,5 +1,15 @@
 {
   "data": {
+    "formItemList": [
+      "input",
+      "textarea",
+      "select"
+    ],
+    "createdForms": [
+      {
+        "name": "form 1"
+      }
+    ],
     "form": [
       {
         "id": 1,

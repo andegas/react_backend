@@ -12,3 +12,8 @@ export const getViewTxtArea =()=>({
 export const getViewSelectOpt =()=>({
     type:'GET_VIEW_SELECT_OPTION',
 });
+
+export const getListData =(actionType)=>({
+    type:'GET_LIST_DATA',
+    actionType
+});

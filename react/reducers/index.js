@@ -23,6 +23,10 @@ const reducer = (state = initState, action) => {
         return {...state = initState};
     case 'SELECT_OPTION_VIEW_RECEIVED':
         return { ...state, selectOptView: action.jsonSelectOpt};
+    case 'GET_LIST_DATA':
+        return {...state = initState};
+    case 'SET_LIST_ITEMS':
+        return {...state, list: action.listItems}
     default:
         return state;
     }
