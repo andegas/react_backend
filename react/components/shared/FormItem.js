@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setDataStore} from '../actions';
+import {setDataStore} from '../../actions';
 
 
 class FormItem extends React.Component {

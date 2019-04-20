@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setDataStore} from '../../actions';
-import List from '../List';
-import Form from '../Form';
-import Result from '../Result';
+import List from '../shared/List';
+import Form from '../shared/Form';
+import Result from '../shared/Result';
 
 
 class Home extends React.Component{

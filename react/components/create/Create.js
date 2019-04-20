@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FormItems from '../formItems/FormItems';
-import ViewFormSettings from '../formItems/ViewFormSettings';
-import JsonView from '../formItems/JsonView';
+import FormItems from '../shared/formitems/FormItems';
+import ViewFormSettings from '../shared/formitems/ViewFormSettings';
+import JsonView from '../shared/formitems/JsonView';
 
 class Create extends React.Component{
     render(){
