@@ -7,19 +7,17 @@ class TextareaForm extends React.Component{
         super(props);
     }
 
-    render(){
-        const {textArea} =  this.props;
-
+    render() {
         return (
-            <div className='col-12 px-0 py-1 f_item'>
-                <input type="button" value='Textarea' className='btn px-4' onClick={textArea} />
-            </div>
+            <label>{this.props.label}
+                <textarea placeholder={this.props.placeholder}>{this.props.value}</textarea>
+            </label>
         );
     }
 }
 
 const mapDispatchToPropsTxtArea = {
     textArea : getViewTxtArea
-}
+};
 
 export default connect(null,mapDispatchToPropsTxtArea)(TextareaForm);
