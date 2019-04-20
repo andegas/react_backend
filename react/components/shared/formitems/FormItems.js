@@ -13,11 +13,11 @@ class FormItems extends React.Component{
     render(){
         return (
             <div className='col-12 px-0 form_items'>
-                <Input />
+                {/*<Input />*/}
                 {/*<Checkbox />*/}
                 {/*<Radio />*/}
-                <Textarea />
-                <Select />
+                {/*<Textarea />*/}
+                {/*<Select />*/}
             </div>
         );
     }
