@@ -1,7 +1,8 @@
 import Actions from '../actionsTypes';
 
 const initState = {
-    data: []
+    data: [],
+    form: []
 };
 
 export default  (state = initState, action) => {
@@ -18,6 +19,8 @@ export default  (state = initState, action) => {
         return {...state = initState};
     case Actions.SELECT_OPTION_VIEW_RECEIVED:
         return { ...state, selectOptView: action.jsonSelectOpt};
+    case Actions.KEEP_DATA_IN_FORM:
+        return {...state, form:[...state.form, action.data]}
     default:
         return state;
     }

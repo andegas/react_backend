@@ -12,3 +12,7 @@ export const getViewTxtArea =()=>({
 export const getViewSelectOpt =()=>({
     type:'GET_VIEW_SELECT_OPTION',
 });
+export const keepDataInForm = (data)=>({
+    type: 'KEEP_DATA_IN_FORM',
+    data: data
+})

@@ -9,9 +9,11 @@ class InputForm extends React.Component {
 
     render() {
         return (
-            <label>{this.props.label}
-                <input type={this.props.type} value={this.props.value} placeholder={this.props.placeholder}/>
-            </label>
+            <div className="form-group">
+             <label>{this.props.data.label}</label>
+             <input className="form-control" type={this.props.data.type} value={this.props.data.value} placeholder={this.props.data.placeholder}/>
+            </div>
+           
         );
     }
 }

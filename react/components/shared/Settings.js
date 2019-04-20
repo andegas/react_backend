@@ -1,25 +1,30 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {keepDataInForm} from '../../actions/index'
 
 
 class Settings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {
-                type: 'text'
-            }
+            element: this.props.element,
+            data: {}
         };
     }
 
     handleChange(event) {
         this.setState({data: Object.assign(this.state.data,{[event.target.name]: event.target.value})});
     }
-    submitData(){
-
-        console.log(this.state.data);
+    handleOptionInput(event){
+        this.option = event.target.value
     }
-
+    addOptions(){
+        this.setState(state=>{
+            if(!state.data.options) state.data.options = []; 
+            return state.data.options = [...state.data.options, this.option]
+        })
+        console.log(this.state)
+    }
     render() {
         return (
             <div>
@@ -53,7 +58,7 @@ class Settings extends React.Component {
                         <input type="text" className="form-control" id="name_inp" placeholder="" name="name" onChange={this.handleChange.bind(this)}/>
                     </div>
                 </div>
-                {this.state.data.type !== 'button' && this.state.data.type !== 'submit' &&
+                {this.state.element !== 'select' && this.state.data.type !== 'button' && this.state.data.type !== 'submit' &&
                 <div className="form-group row">
                     <label htmlFor="plc_inp" className="col-12 col-sm-3 col-form-label"> Placeholder: </label>
                     <div className="col-12 col-sm-9">
@@ -61,16 +66,25 @@ class Settings extends React.Component {
                     </div>
                 </div>
                 }
+                {this.state.element === 'select' && 
+                <div className="form-group row">
+                    <label htmlFor="plc_inp" className="col-12 col-sm-3 col-form-label"> Options: </label>
+                    <div className="col-12 col-sm-9">
+                        {this.state.data.options && this.state.data.options.map((el,i)=> <p key={i}>{el}</p>)}
+                        <input type="text" placeholder="Optiona name" name="option" onChange={this.handleOptionInput.bind(this)}/>
+                        <span className="plus_icon ml-1 pointer" onClick={this.addOptions.bind(this)}>+</span>
+                    </div>
+                </div>}
 
                 <div className='text-right'>
-                    <input type="submit" value="Submit" className='btn btn-submit' onClick={this.submitData.bind(this)}/>
+                    <input type="submit" value="Submit" className='btn btn-submit' onClick={this.props.keepDataInForm.bind(this,{element: this.state.element,data:this.state.data})}/>
                 </div>
             </div>
         );
     }
 }
 const mapDispatchToProps = {
-
+    keepDataInForm: keepDataInForm
 };
 
 export default connect(null,mapDispatchToProps)(Settings);
