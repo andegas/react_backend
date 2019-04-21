@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import List from '../shared/List/List';
 import Settings from '../shared/Settings';
 import Form from '../shared/Form';
+import {connect} from 'react-redux';
+import {getListData} from '../../actions';
 
 
 class Create extends React.Component{
@@ -13,6 +15,13 @@ class Create extends React.Component{
         super(props);
         this.listItems = ['input', 'textarea', 'select'];
     }
+    componentDidMount() {
+        this.props.getListData('tags');
+    }
+    // componentWillReceiveProps(nextProps) {
+    //     console.log(nextProps,'ssss');
+    // }
+
     render(){
         return (
             <div className='container-fluid'>
@@ -24,7 +33,7 @@ class Create extends React.Component{
                         <div className='row'>
                             <div className='col-3 px-0'>
                                 {/*<FormItems />*/}
-                                <List type='element_list' listItems={this.listItems}/>
+                                <List type='element_list' listItems={this.props.listItems}/>
                             </div>
                             <div className='col-5 px-0' style={{'backgroundColor':'#d7d6d2'}}>
                                 <Form />
@@ -42,5 +51,13 @@ class Create extends React.Component{
         );
     }
 }
+const mapStateToProps = state =>{
+    return {
+        listItems: state.data.listItems
+    };
+};
+const mapDispatchToProps = {
+    getListData : getListData
+};
 
-export default Create;
+export default connect(mapStateToProps,mapDispatchToProps)(Create);

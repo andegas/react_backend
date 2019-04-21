@@ -8,6 +8,9 @@ class List extends React.Component {
         super(props);
         this.listItems = this.props.listItems;
     }
+    componentWillReceiveProps(nextProps) {
+        this.listItems = nextProps.listItems;
+    }
 
     render() {
         return (
@@ -16,8 +19,8 @@ class List extends React.Component {
                     this.props.type === 'form_list' &&
                     <Link to="/create"> <span className='plus_icon'> +</span> Add new Form </Link>
                 }
-                <div>
-                    {
+                <div className='form_items'>
+                    {this.listItems &&
                         this.listItems.map((v, k) => {
                             return <ListItem key={k} value={v}/>;
                         })

@@ -24,3 +24,7 @@ export const getListData =(actionType)=>({
     type:'GET_LIST_DATA',
     actionType
 });
+export const getElementData =(data)=>({
+    type:'GET_ELEMENT_DATA',
+    element: data
+});

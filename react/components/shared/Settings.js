@@ -25,7 +25,7 @@ class Settings extends React.Component {
         });
     }
     submitData(){
-        this.props.keepDataInForm({element: this.props.elementSelected,data:this.state.data});
+        this.props.keepDataInForm({tagName: this.props.elementSelected.tagName,data:this.state.data});
     }
     render() {
         return (
@@ -39,16 +39,14 @@ class Settings extends React.Component {
                                 <input type="text" className="form-control" id="label_inp" onChange={this.handleChange.bind(this)} placeholder="" name="label"/>
                             </div>
                         </div>
-                        {this.props.type && <div className="form-group row">
+                        {this.props.elementSelected.type && <div className="form-group row">
                             <label htmlFor="type_inp" className="col-12 col-sm-3 col-form-label"> Type: </label>
                             <div className="col-12 col-sm-9">
-                                <select name="type" value={this.state.type} onChange={this.handleChange.bind(this)} className="form-control" id="type_inp">
+                                <select name="type" value={this.state.data.type} onChange={this.handleChange.bind(this)} className="form-control" id="type_inp">
                                     {
-                                        this.props.type.map((v) => {
+                                        this.props.elementSelected.type.map((v,i) => {
                                             return (
-                                                <>
-                                                    <option value={v} style={{textTransform: 'capitalize'}}> {v} </option>
-                                                </>
+                                                <option key={i} value={v} style={{textTransform: 'capitalize'}}> {v} </option>
                                             );
 
                                         })
@@ -62,7 +60,7 @@ class Settings extends React.Component {
                                 <input type="text" className="form-control" id="name_inp" placeholder="" name="name" onChange={this.handleChange.bind(this)}/>
                             </div>
                         </div>
-                        {this.props.elementSelected !== 'select' && this.state.data.type !== 'button' && this.state.data.type !== 'submit' &&
+                        {this.props.elementSelected.tagName !== 'select' && this.state.data.type !== 'button' && this.state.data.type !== 'submit' &&
                         <div className="form-group row">
                             <label htmlFor="plc_inp" className="col-12 col-sm-3 col-form-label"> Placeholder: </label>
                             <div className="col-12 col-sm-9">
@@ -70,13 +68,17 @@ class Settings extends React.Component {
                             </div>
                         </div>
                         }
-                        {this.props.elementSelected === 'select' &&
+                        {this.props.elementSelected.tagName === 'select' &&
                         <div className="form-group row">
                             <label htmlFor="plc_inp" className="col-12 col-sm-3 col-form-label"> Options: </label>
-                            <div className="col-12 col-sm-9">
-                                {this.state.data.options && this.state.data.options.map((el,i)=> <p key={i}>{el}</p>)}
-                                <input type="text" placeholder="Option name" name="option" onChange={this.handleOptionInput.bind(this)}/>
-                                <span className="plus_icon ml-1 pointer" onClick={this.addOptions.bind(this)}>+</span>
+                            <div className="col-12 col-sm-9 input-group">
+                                <div className='col-12'>
+                                    {this.state.data.options && this.state.data.options.map((el,i)=> <p key={i}>{el}</p>)}
+                                </div>
+                                <input className='form-control' type="text" placeholder="Option name" name="option" onChange={this.handleOptionInput.bind(this)}/>
+                                <div className="input-group-append">
+                                    <span className="input-group-text plus_icon pointer" onClick={this.addOptions.bind(this)}>+</span>
+                                </div>
                             </div>
                         </div>}
 

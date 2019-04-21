@@ -51,7 +51,6 @@ function* fetchSelectOption() {
 function* fetchGetList(actionType) {
     try {
         const response = yield axios.get('/data');
-
         if(actionType.actionType == 'home'){
             // return response.data.createdForms;
             yield put({type: 'SET_LIST_ITEMS', listItems: response.data.createdForms});
@@ -64,11 +63,20 @@ function* fetchGetList(actionType) {
         console.log(e.toString());
     }
 }
+function* fetchElementData(action) {
+    try {
+        const response = yield axios.get('/data');
+        yield put({type: 'SELECT_ELEMENT', data: response.data.form[action.element]});
+    } catch (e) {
+        console.log(e.toString());
+    }
+}
 function* actionWatcher() {
     yield takeLatest('GET_LIST_DATA', fetchGetList);
     yield takeLatest('GET_VIEW_SELECT_OPTION', fetchSelectOption);
     yield takeLatest('GET_VIEW_TEXTAREA', fetchTxtArea);
     yield takeLatest('GET_VIEW', fetchInput);
+    yield takeLatest('GET_ELEMENT_DATA', fetchElementData);
 }
 export default function* rootSaga() {
     yield all([

@@ -9,9 +9,10 @@ class TextareaForm extends React.Component{
 
     render() {
         return (
-            <label>{this.props.label}
-                <textarea placeholder={this.props.placeholder}>{this.props.value}</textarea>
-            </label>
+            <div className="form-group">
+                <label>{this.props.data.label} </label>
+                <textarea className='form-control' placeholder={this.props.data.placeholder}>{this.props.data.value}</textarea>
+            </div>
         );
     }
 }

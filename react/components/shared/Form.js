@@ -12,21 +12,20 @@ class Form extends React.Component {
             form: props.form,
             elements: {
                 input: (data, i)=>{
-                    return <InputForms key={i} data={data} />
+                    return <InputForms key={i} data={data} />;
                 },
                 select: (data, i)=>{
-                    return <SelectForms key={i} data={data}/>
+                    return <SelectForms key={i} data={data}/>;
                 },
                 textarea: (data, i)=>{
-                    return <TextareaForm key={i} data={data}/>
+                    return <TextareaForm key={i} data={data}/>;
                 }
             }
         }
     }
 
     componentWillReceiveProps(nextProps){
-        console.log(nextProps)
-        this.setState({form:nextProps.form})
+        this.setState({form:nextProps.form});
     }
     render() {
         return (
@@ -34,8 +33,13 @@ class Form extends React.Component {
                 <div className='text-center'>Form</div>
                 <form>
                     <div className="col-12">
-                        {this.state.form.map((el,i)=>(this.state.elements[el.element](el.data, i)))}                    
+                        {this.state.form.map((el,i)=>(this.state.elements[el.tagName](el.data, i)))}
                     </div>
+                    {this.state.form.length>0 &&
+                    <div className="col-12 text-center">
+                        <button className="btn btn-submit">Submit</button>
+                    </div>
+                    }
                 </form>
             </div>
         );

@@ -4,7 +4,6 @@ select:focus{
     outline: none !important;
 }
 .plus_icon {
-    font-size: 25px;
     font-weight: 600;
     color: green;
     text-align: center;
@@ -40,4 +39,7 @@ a:hover {
 }
 .pointer{ 
     cursor: pointer;
+}
+input.btn {
+    text-transform: capitalize;
 }
