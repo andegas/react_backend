@@ -23,6 +23,8 @@ export default  (state = initState, action) => {
         return {...state, form:[...state.form, action.data]};
     case Actions.SELECT_ELEMENT:
         return {...state, elementSelected: action.data};
+    case Actions.SET_LIST_ITEMS:
+        return {...state, listItems: action.listItems};
     default:
         return state;
     }

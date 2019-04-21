@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 // import ViewFormSettings from '../shared/formitems/ViewFormSettings';
 // import JsonView from '../shared/formitems/JsonView';
 import List from '../shared/List/List';
-import Settings from '../shared/Settings'
-import Form from '../shared/Form'
+import Settings from '../shared/Settings';
+import Form from '../shared/Form';
 
 
 class Create extends React.Component{

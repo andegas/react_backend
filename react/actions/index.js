@@ -20,3 +20,7 @@ export const selectElement = (data)=>({
     type: 'SELECT_ELEMENT',
     data: data
 });
+export const getListData =(actionType)=>({
+    type:'GET_LIST_DATA',
+    actionType
+});

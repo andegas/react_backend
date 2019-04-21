@@ -1,9 +1,19 @@
 {
   "data": {
+    "formItemList": [
+      "input",
+      "textarea",
+      "select"
+    ],
+    "createdForms": [
+       "form 1",
+       "form 2"
+    ],
     "form": [
       {
         "id": 1,
         "type": [
+
           "text",
           "password",
           "email",

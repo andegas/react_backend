@@ -48,23 +48,30 @@ function* fetchSelectOption() {
         console.log(e.toString());
     }
 }
+function* fetchGetList(actionType) {
+    try {
+        const response = yield axios.get('/data');
 
+        if(actionType.actionType == 'home'){
+            // return response.data.createdForms;
+            yield put({type: 'SET_LIST_ITEMS', listItems: response.data.createdForms});
+        }else{
+            // return response.data.formItemList;
+            yield put({type: 'SET_LIST_ITEMS', listItems: response.data.formItemList});
+        }
+
+    } catch (e) {
+        console.log(e.toString());
+    }
+}
 function* actionWatcher() {
+    yield takeLatest('GET_LIST_DATA', fetchGetList);
+    yield takeLatest('GET_VIEW_SELECT_OPTION', fetchSelectOption);
+    yield takeLatest('GET_VIEW_TEXTAREA', fetchTxtArea);
     yield takeLatest('GET_VIEW', fetchInput);
 }
-
-function* actionWatcherTxtArea() {
-    yield takeLatest('GET_VIEW_TEXTAREA', fetchTxtArea);
-}
-
-function* actionWatcherSelectOption() {
-    yield takeLatest('GET_VIEW_SELECT_OPTION', fetchSelectOption);
-}
-
 export default function* rootSaga() {
     yield all([
-        actionWatcher(),
-        actionWatcherTxtArea(),
-        actionWatcherSelectOption()
+        actionWatcher()
     ]);
 }
