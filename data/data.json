@@ -9,11 +9,10 @@
        "form 1",
        "form 2"
     ],
-    "form": [
-      {
-        "id": 1,
+    "form": {
+      "input": {
+        "tagName": "input",
         "type": [
-
           "text",
           "password",
           "email",
@@ -26,18 +25,20 @@
         "name": "",
         "value": "",
         "placeholder": "",
-        "label": ""
+        "label": "",
+        "validation": {}
       },
-      {
-        "id": 2,
+      "textarea": {
+        "tagName": "textarea",
         "type": "",
         "name": "",
         "value": "",
         "placeholder": "",
-        "label": ""
+        "label": "",
+        "validation": {}
       },
-      {
-        "id": 3,
+      "select": {
+        "tagName": "select",
         "type": "",
         "name": "",
         "value": "",
@@ -45,8 +46,9 @@
         "option": {
           "value": "",
           "label": ""
-        }
+        },
+        "validation": {}
       }
-    ]
+    }
   }
 }
