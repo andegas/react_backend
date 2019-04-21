@@ -15,4 +15,8 @@ export const getViewSelectOpt =()=>({
 export const keepDataInForm = (data)=>({
     type: 'KEEP_DATA_IN_FORM',
     data: data
-})
+});
+export const selectElement = (data)=>({
+    type: 'SELECT_ELEMENT',
+    data: data
+});

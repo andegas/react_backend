@@ -20,7 +20,9 @@ export default  (state = initState, action) => {
     case Actions.SELECT_OPTION_VIEW_RECEIVED:
         return { ...state, selectOptView: action.jsonSelectOpt};
     case Actions.KEEP_DATA_IN_FORM:
-        return {...state, form:[...state.form, action.data]}
+        return {...state, form:[...state.form, action.data]};
+    case Actions.SELECT_ELEMENT:
+        return {...state, elementSelected: action.data};
     default:
         return state;
     }

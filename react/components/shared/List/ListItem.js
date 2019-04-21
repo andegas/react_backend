@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
+import {selectElement} from '../../../actions';
 
 class ListItem extends React.Component{
     constructor(props){
@@ -9,11 +10,13 @@ class ListItem extends React.Component{
     render(){
         return (
             <div>
-                <input type='button' value={this.props.value}/>
+                <input className='btn px-4' type='button' value={this.props.value} onClick={this.props.selectElement.bind(this, this.props.value)}/>
             </div>
 
         );
     }
 }
-
-export default ListItem;
+const mapDispatchToProps = {
+    selectElement: selectElement
+};
+export default connect(null,mapDispatchToProps)(ListItem);

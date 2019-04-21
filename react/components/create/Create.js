@@ -7,15 +7,19 @@ import List from '../shared/List/List';
 import Settings from '../shared/Settings'
 import Form from '../shared/Form'
 
+
 class Create extends React.Component{
     constructor(props) {
         super(props);
-        this.listItems = ['Input', 'Textarea', 'Select'];
+        this.listItems = ['input', 'textarea', 'select'];
     }
     render(){
         return (
             <div className='container-fluid'>
                 <div className='row'>
+                    <div className='col-12'>
+                        <Link to="/">Home</Link>
+                    </div>
                     <div className='col-12'>
                         <div className='row'>
                             <div className='col-3 px-0'>
@@ -32,9 +36,6 @@ class Create extends React.Component{
                             </div>
                         </div>
 
-                    </div>
-                    <div className='col-12'>
-                        <Link to="/">Home</Link>
                     </div>
                 </div>
             </div>
