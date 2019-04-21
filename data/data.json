@@ -26,7 +26,11 @@
         "value": "",
         "placeholder": "",
         "label": "",
-        "validation": {}
+        "validation": [
+          "required",
+          "min-length",
+          "max-length"
+        ]
       },
       "textarea": {
         "tagName": "textarea",
@@ -35,7 +39,11 @@
         "value": "",
         "placeholder": "",
         "label": "",
-        "validation": {}
+        "validation": [
+          "required",
+          "min-length",
+          "max-length"
+        ]
       },
       "select": {
         "tagName": "select",
@@ -47,7 +55,9 @@
           "value": "",
           "label": ""
         },
-        "validation": {}
+        "validation": [
+          "required"
+        ]
       }
     }
   }
